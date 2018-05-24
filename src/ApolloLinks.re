@@ -28,7 +28,7 @@ external split :
     ~right: apolloLink
   ) =>
   apolloLink =
-  "split";
+  "split" /* Bind the split method */;
 
 /**
  * CreateHttpLink
