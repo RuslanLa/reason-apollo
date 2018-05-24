@@ -27,7 +27,28 @@ type linkOptions = {
   "fetch": Js.Nullable.t(fetch),
   "headers": Js.Nullable.t(Js.Json.t),
   "credentials": Js.Nullable.t(string),
-  "fetchOptions": Js.Nullable.t(Js.Json.t),
+  "fetchOptions": Js.Nullable.t(Js.Json.t)
+};
+
+type connectionCallback;
+
+type wsLinkOptions = {
+  .
+  "timeout": Js.Nullable.t(int),
+  "reconnect": Js.Nullable.t(bool),
+  "reconnectionAttempts": Js.Nullable.t(int),
+  "connectionCallback": Js.Nullable.t(connectionCallback),
+  "lazy": Js.Nullable.t(bool),
+  "inactivityTimeout": Js.Nullable.t(int)
+};
+
+type webSocketImplementation;
+
+type wsLinkConfig = {
+  .
+  "uri": string,
+  "options": Js.Nullable.t(wsLinkOptions),
+  "webSocketImpl": Js.Nullable.t(webSocketImplementation)
 };
 
 [@bs.module "apollo-client"] [@bs.new]

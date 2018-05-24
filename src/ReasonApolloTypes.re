@@ -43,7 +43,11 @@ type apolloError = {
 };
 
 type apolloOptions = {
-    .
-    "query": queryString,
-    "variables": Js.Json.t,
+  .
+  "query": queryString,
+  "variables": Js.Json.t
 };
+
+type documentNode;
+
+type operation = {. "query": documentNode};
